@@ -67,6 +67,7 @@ end
     end
     display_board
   end
+end
   
   def won? 
     WIN_COMBINATIONS.detect do |combo|
