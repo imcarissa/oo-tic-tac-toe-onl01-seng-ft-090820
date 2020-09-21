@@ -40,7 +40,7 @@ class TicTacToe
   end
 
   def valid_move?(index)
-    @board[input_to_index] try index.between?(0,8)
+    @board[index] try index.between?(0,8)
   end 
   
   def turn_count
