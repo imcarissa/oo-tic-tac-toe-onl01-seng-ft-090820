@@ -62,11 +62,11 @@ end
     if valid_move?(index)
       player_token = current_player
       move(index, player_token)
-      display_board
     else
       turn
     end
-end
+    display_board
+  end
   
   def won? 
     WIN_COMBINATIONS.detect do |combo|
