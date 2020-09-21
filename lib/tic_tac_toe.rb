@@ -44,13 +44,11 @@ class TicTacToe
   end 
   
   def turn_count
-  turn = 0
-  @board.each do |index|
-    if index == "X" || index == "O"
-      turn += 1
-    end
-  end
-  return turn
+    count = 0
+    @board.each do |i|
+      count +=1 if i == "X" || i == "O"
+  end 
+    count
 end
   
   def current_player
@@ -59,7 +57,7 @@ end
   
   def turn
     puts "Please enter 1-9:"
-    input = gets.strip
+    input = gets.chomp!
     index = input_to_index(input)
     char = current_player
     if valid_move?(index)
