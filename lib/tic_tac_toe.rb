@@ -57,15 +57,15 @@ end
   
   def turn
     puts "Please enter a number 1-9:"
-    input = gets.strip
-    index = input_to_index(input)
+    user_input = gets.chomp
+    index = input_to_index(user_input)
     if valid_move?(index)
       token = current_player
       move(index, token)
+      display_board
     else
       turn
     end
-    display_board
   end
   
   def won? 
